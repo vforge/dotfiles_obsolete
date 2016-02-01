@@ -7,7 +7,7 @@
 
 [core]
     autocrlf = input
-    editor = vim
+    editor = nvim
     ignorecase = false
     filemode = false
     excludesfile = ~/.gitignore_global
@@ -29,7 +29,7 @@
     pl = pull --rebase
     pu = push
     push-branch = !echo "Pushing to origin" && git push --set-upstream origin `git rev-parse --abbrev-ref HEAD` && :
-    swap = !echo "Swapping to $1" && git co $1 && git pl && git s && :
+    swap = !echo "Swapping to $1" && git pl && git co $1 && git s && :
     cl = !echo "Cleaning up current branch" && git clean -df && git reset HEAD --hard && :
     dev = !git swap dev && :
     uncommit = reset --soft HEAD^
