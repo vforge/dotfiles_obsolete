@@ -1,0 +1,52 @@
+[user]
+    name = Bartosz V. Bentkowski
+    email = vforge@users.noreply.github.com
+
+[push]
+    default = simple
+
+[core]
+    autocrlf = input
+    editor = vim
+    ignorecase = false
+    filemode = false
+    excludesfile = ~/.gitignore_global
+    symlinks = false
+
+[github]
+    user = vforge
+
+[alias]
+    a = !echo "Adding all changes..." && git add -A && git s && :
+    s = status -sb
+    c = commit -m
+    co = checkout
+    d = diff
+    l = log --stat -C
+    m = merge --no-ff
+    ld = log --pretty=format:'%h %Cblue%ad%Creset %an %Cgreen%s%Creset' --date=relative
+    lg = log --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    pl = pull --rebase
+    pu = push
+    push-branch = !echo "Pushing to origin" && git push --set-upstream origin `git rev-parse --abbrev-ref HEAD` && :
+    swap = !echo "Swapping to $1" && git co $1 && git pl && git s && :
+    cl = !echo "Cleaning up current branch" && git clean -df && git reset HEAD --hard && :
+    dev = !git swap dev && :
+    uncommit = reset --soft HEAD^
+    unamend = reset --soft HEAD@{1}
+
+[color]
+    ui = auto
+    diff = auto
+    status = auto
+    branch = auto
+    interactive = true
+
+[pager]
+    status = true
+
+[branch]
+    autosetuprebase = always
+
+[rebase]
+    autosquash = true
