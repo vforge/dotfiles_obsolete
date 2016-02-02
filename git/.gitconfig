@@ -1,52 +1,58 @@
 [user]
-    name = Bartosz V. Bentkowski
-    email = vforge@users.noreply.github.com
+  name = Bartosz V. Bentkowski
+  email = vforge@users.noreply.github.com
 
 [push]
-    default = simple
+  default = simple
 
 [core]
-    autocrlf = input
-    editor = nvim
-    ignorecase = false
-    filemode = false
-    excludesfile = ~/.gitignore_global
-    symlinks = false
+  autocrlf = input
+  editor = nvim
+  excludesfile = ~/.gitignore_global
+  filemode = false
+  ignorecase = false
+  symlinks = false
 
 [github]
-    user = vforge
+  user = vforge
 
 [alias]
-    a = !echo "Adding all changes..." && git add -A && git s && :
-    s = status -sb
-    c = commit -m
-    co = checkout
-    d = diff
-    l = log --stat -C
-    m = merge --no-ff
-    ld = log --pretty=format:'%h %Cblue%ad%Creset %an %Cgreen%s%Creset' --date=relative
-    lg = log --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-    pl = pull --rebase
-    pu = push
-    push-branch = !echo "Pushing to origin" && git push --set-upstream origin `git rev-parse --abbrev-ref HEAD` && :
-    swap = !echo "Swapping to $1" && git pl && git co $1 && git s && :
-    cl = !echo "Cleaning up current branch" && git clean -df && git reset HEAD --hard && :
-    dev = !git swap dev && :
-    uncommit = reset --soft HEAD^
-    unamend = reset --soft HEAD@{1}
+  co = checkout
+  d = diff
+  f = fetch
+  pu = push
+  
+  c = commit -m
+  l = log --stat -C
+  m = merge --no-ff
+  pl = pull --rebase
+  s = status -sb
+  
+  unamend = reset --soft HEAD@{1}
+  uncommit = reset --soft HEAD^
+  
+  ld = log --pretty=format:'%h %Cblue%ad%Creset %an %Cgreen%s%Creset' --date=relative
+  lg = log --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  
+  a = !echo "Adding all changes..." && git add -A && git s && :
+  cl = !echo "Cleaning up current branch" && git clean -df && git reset HEAD --hard && :
+  push-branch = !echo "Pushing to origin" && git push --set-upstream origin `git rev-parse --abbrev-ref HEAD` && :
+  swap = !echo "Swapping to $1" && git f && git co $1 && git pl && :
+  
+  dev = !git swap dev && :
 
 [color]
-    ui = auto
-    diff = auto
-    status = auto
-    branch = auto
-    interactive = true
+  branch = auto
+  diff = auto
+  interactive = true
+  status = auto
+  ui = auto
 
 [pager]
-    status = true
+  status = true
 
 [branch]
-    autosetuprebase = always
+  autosetuprebase = always
 
 [rebase]
-    autosquash = true
+  autosquash = true
