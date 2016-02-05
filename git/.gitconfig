@@ -21,24 +21,24 @@
   d = diff
   f = fetch
   pu = push
-  
+
   c = commit -m
   l = log --stat -C
   m = merge --no-ff
   pl = pull --rebase
   s = status -sb
-  
+
   unamend = reset --soft HEAD@{1}
   uncommit = reset --soft HEAD^
-  
+
   ld = log --pretty=format:'%h %Cblue%ad%Creset %an %Cgreen%s%Creset' --date=relative
   lg = log --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-  
+
   a = !echo "Adding all changes..." && git add -A && git s && :
   cl = !echo "Cleaning up current branch" && git clean -df && git reset HEAD --hard && :
   push-branch = !echo "Pushing to origin" && git push --set-upstream origin `git rev-parse --abbrev-ref HEAD` && :
   swap = !echo "Swapping to $1" && git f && git co $1 && git pl && :
-  
+
   dev = !git swap dev && :
 
 [color]
