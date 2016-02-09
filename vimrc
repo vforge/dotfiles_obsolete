@@ -1,0 +1,2 @@
+set paste
+set nu
