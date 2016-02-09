@@ -8,6 +8,7 @@ http://thoughtbot.github.io/rcm/rcm.7.html
 https://github.com/lee-dohm/dotfiles
 https://github.com/thoughtbot/dotfiles
 https://github.com/dougblack/dotfiles
+https://github.com/kenkouot/dotfiles
 
 # Misc
 https://github.com/thoughtbot/laptop

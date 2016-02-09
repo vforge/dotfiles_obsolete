@@ -8,6 +8,7 @@ set number
 set showcmd
 set nocursorline
 set showmatch
+set hidden
 
 set ignorecase
 set hlsearch
