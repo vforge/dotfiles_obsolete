@@ -12,4 +12,4 @@ https://github.com/kenkouot/dotfiles
 
 # Misc
 https://github.com/thoughtbot/laptop
-
+http://stackoverflow.com/questions/166347/how-do-i-use-ruby-for-shell-scripting
