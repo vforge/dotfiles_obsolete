@@ -28,6 +28,7 @@
   m = merge --no-ff
   pl = pull --rebase
   s = status -sb
+  fp = fetch --prune
 
   unamend = reset --soft HEAD@{1}
   uncommit = reset --soft HEAD^
