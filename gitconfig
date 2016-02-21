@@ -44,9 +44,9 @@
 
   ff = !echo "Fast-forward!" && git pl && git fp && :
   dev = !git swap dev && :
-  devcl = !git dev && git ff && :
+  devf = !git dev && git ff && :
   master = !git swap master && :
-  mastercl = !git master && git ff && :
+  masterf = !git master && git ff && :
   z = !echo "Zipping to dist/$1-$2.zip" && mkdir -p dist && git archive -o dist/$1-$2.zip --prefix=$1/ HEAD && :
 
 [color]
