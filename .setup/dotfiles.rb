@@ -5,7 +5,7 @@ module Dotfiles
     target = "#{self.home}/.#{name}"
 
     puts "Copying #{target}"
-    FileUtils.cp "../#{name}", target
+    FileUtils.cp name, target
   end
 
   def self.rm_dir path
@@ -19,7 +19,7 @@ module Dotfiles
     target = "#{self.home}/#{path}"
 
     puts "Copying #{target}"
-    FileUtils.cp_r "../#{path}", target
+    FileUtils.cp_r path, target
   end
 
   def self.clear_dir path
