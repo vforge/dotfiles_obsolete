@@ -9,6 +9,7 @@ https://github.com/lee-dohm/dotfiles
 https://github.com/thoughtbot/dotfiles
 https://github.com/dougblack/dotfiles
 https://github.com/kenkouot/dotfiles
+https://github.com/pburtchaell/dotfiles
 
 # Misc
 https://github.com/thoughtbot/laptop
