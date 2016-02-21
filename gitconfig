@@ -43,6 +43,7 @@
   swap = !echo "Swapping to $1" && git f && git co $1 && git pl && :
 
   dev = !git swap dev && :
+  devcl = !git swap dev && git pl && git fp && :
   z = !echo "Zipping to dist/$1-$2.zip" && mkdir -p dist && git archive -o dist/$1-$2.zip --prefix=$1/ HEAD && :
 
 [color]
