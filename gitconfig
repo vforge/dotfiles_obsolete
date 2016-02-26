@@ -43,7 +43,7 @@
   swap = !echo "Swapping to $1" && git f && git co $1 && git pl && :
 
   ff = !echo "Fast-forward!" && git pl && git fp && :
-  upz = !echo "Lazy-update" && git a && git c update_"$(date +%s)" && git pu && :
+  upz = !echo "Lazy-update" && git add -A && git c update_"$(date +%s)" && git pu && :
 
   dev = !git swap dev && :
   devf = !git dev && git ff && :
